@@ -58,8 +58,6 @@ After copying the apiary blue print at the bottom of this lab, you can get your 
 
 Create an app driven orchestration integration. Then start the integration with your ERP connection.
 
-![](200/4.png)
-
 ### 4. Create a PO in ERP 
 
 ### 5. Verify & monitor the integration on OIC & Apiary
