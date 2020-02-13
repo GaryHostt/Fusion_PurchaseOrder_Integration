@@ -1,21 +1,19 @@
 # Workshop: Fusion & Purchase orders with Oracle Integration
-How to receive business events from Fusion and create purchase orders with OIC. 
 
 ![](100/69.png)
 
-## Trigger via business events
-
-This lab will show how to configure ERP as an integration trigger.
+How to receive business events from Fusion and create purchase orders with OIC. 
 
 ## Objectives
 
-•	Create an integration to listen for a business event in ERP
+This lab will show how to configure ERP as an integration trigger with the ERP adapter, and how to invoke it.
 
 ### Outline
 1. Configure ERP to send business events to OIC
-2. Create the integration
-3. Performan the ERP business event
-4. Test & monitor the integration 
+2. Create an apiary mock endpoint
+3. Create the integration
+4. Performan the ERP business event
+5. Test & monitor the integration 
 
 ## Reference
 
@@ -25,9 +23,9 @@ This is also how your integration will look at the end of the walkthrough.
 
 During the walkthrough, relevant instructions will be UNDER the picture they correlate with.
 
-# Walkthrough
+## Trigger Walkthrough
 
-## 1.	Configure ERP to send business events to OIC
+### 1.	Configure ERP to send business events to OIC
 
 View these links from the a-team to learn how to configure ERP to send business events to OIC. 
 
@@ -49,55 +47,36 @@ Name your connection.
 
 Configure your connection details, all of these fields need to be filled out. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud-service/icser/creating-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
 
-## 2. Create the apiary mock endpoint
+### 2. Create the apiary mock endpoint
+
+INSERT APIARY SCREENSHOT
+
+After copying the apiary blue print at the bottom of this lab, you can get your base URL from the location in the screenshot above.
 
 
-## 3. Create the integration to receive the PO data upon creation
-
+### 3. Create the integration to receive the PO data upon creation
 
 Create an app driven orchestration integration. Then start the integration with your ERP connection.
 
 ![](200/4.png)
 
-## 4. Create a PO in ERP 
+### 4. Create a PO in ERP 
 
-
-![](200/14.png)
-
-From the ERP homepage, navigate to the Product Information Management suite.
-
-![](200/15.png)
-
-Click the side bar on the right. 
-
-![](200/16.png)
-
-Click on create item.
-
-![](200/17.png)
-
-These details can vary per your use case, here we select these fields. 
-![](200/18.png)
-
-Press yes if you get this warning. 
-![](200/19.png)
-
-Enter the details for your item. 
-
-![](200/20.png)
-
-Save and close. This will trigger the business event that a new item was created. The information will be passed to Oracle Integration. 
-
-## 4. Verify & monitor the integration on OIC & Apiary
-
+### 5. Verify & monitor the integration on OIC & Apiary
 
 [Watch this video to see PO creation](https://www.youtube.com/watch?v=jCUEBjNi86k)
 
 ## Invoke
 
-https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html
+[This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
 ## Apiary blueprint
+
+# Further work
+
+[Creating POs with VBCS](http://niallcblogs.blogspot.com/2019/03/695-oic-subscribing-to-fusion-erp.html)
+
+[Using a Digital Assistant Custom skill to create a PO](https://github.com/oracle/bots-node-sdk)
 
 ```
 FORMAT: 1A
