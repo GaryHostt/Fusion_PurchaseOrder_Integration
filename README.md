@@ -67,7 +67,7 @@ Create an app driven orchestration integration. Then start the integration with 
 
 [Watch this video to see PO creation](https://www.youtube.com/watch?v=jCUEBjNi86k)
 
-## Invoke
+## Invoke Walkthrough
 
 [This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
