@@ -49,7 +49,7 @@ Configure your connection details, all of these fields need to be filled out. [F
 
 ### 2. Create the apiary mock endpoint
 
-INSERT APIARY SCREENSHOT
+![](100/71.png)
 
 After copying the apiary blue print at the bottom of this lab, you can get your base URL from the location in the screenshot above.
 
