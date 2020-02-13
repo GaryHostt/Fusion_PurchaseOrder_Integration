@@ -68,7 +68,6 @@ Create an app driven orchestration integration. Then start the integration with 
 
 [This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
-## Apiary blueprint
 
 # Further work
 
@@ -76,6 +75,8 @@ Create an app driven orchestration integration. Then start the integration with 
 
 [Using a Digital Assistant Custom skill to create a PO](https://github.com/oracle/bots-node-sdk)
 
+
+## Apiary blueprint
 ```
 FORMAT: 1A
 HOST: https://polls.apiblueprint.org/
