@@ -53,6 +53,9 @@ Configure your connection details, all of these fields need to be filled out. [F
 
 After copying the apiary blue print at the bottom of this lab, you can get your base URL from the location in the screenshot above.
 
+![](100/72.png)
+
+Create a REST connection and type your base url, make sure you have no security policy selected.
 
 ### 3. Create the integration to receive the PO data upon creation
 
