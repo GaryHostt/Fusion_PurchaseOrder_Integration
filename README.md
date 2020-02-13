@@ -1,7 +1,7 @@
 # Workshop: Fusion & Purchase orders with Oracle Integration
 How to receive business events from Fusion and create purchase orders with OIC. 
 
-![](screenshots/100/69.png)
+![](100/69.png)
 
 ## Trigger via business events
 
@@ -37,15 +37,15 @@ View these links from the a-team to learn how to configure ERP to send business 
 
 After doing the above configuration, you can create the connection with the adapter in OIC. 
 
-![](screenshots/200/1.png)
+![](200/1.png)
 
 In OIC, select the Oracle ERP cloud adapter.
 
-![](screenshots/200/2.png)
+![](200/2.png)
 
 Name your connection.
 
-![](screenshots/200/3.png)
+![](200/3.png)
 
 Configure your connection details, all of these fields need to be filled out. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud-service/icser/creating-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
 
@@ -57,34 +57,34 @@ Configure your connection details, all of these fields need to be filled out. [F
 
 Create an app driven orchestration integration. Then start the integration with your ERP connection.
 
-![](screenshots/200/4.png)
+![](200/4.png)
 
 ## 4. Create a PO in ERP 
 
 
-![](screenshots/200/14.png)
+![](200/14.png)
 
 From the ERP homepage, navigate to the Product Information Management suite.
 
-![](screenshots/200/15.png)
+![](200/15.png)
 
 Click the side bar on the right. 
 
-![](screenshots/200/16.png)
+![](200/16.png)
 
 Click on create item.
 
-![](screenshots/200/17.png)
+![](200/17.png)
 
 These details can vary per your use case, here we select these fields. 
-![](screenshots/200/18.png)
+![](200/18.png)
 
 Press yes if you get this warning. 
-![](screenshots/200/19.png)
+![](200/19.png)
 
 Enter the details for your item. 
 
-![](screenshots/200/20.png)
+![](200/20.png)
 
 Save and close. This will trigger the business event that a new item was created. The information will be passed to Oracle Integration. 
 
