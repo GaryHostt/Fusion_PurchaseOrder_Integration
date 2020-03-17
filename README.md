@@ -309,6 +309,8 @@ Next, you'll have to map to outputs from Fusion & salesforce to your REST adapte
 
 Congratulations, now you can query for a contact's name by its id i salesforce, and get back Bank Account information. If I was operating a proper business, my ERP system likely would've contained a 'salesforce_contact_id' field, in which case I could have had this integration only start with one field to have the same information returned. Never the less, now we have an understanding of integration, for the purpose of querying multiple systems. 
 
+In lieu of salesforce, we could have used a GET endpoint on Apiary to simulate the same effect. Continue below to learn how to use Apiary in such a manner.
+
 # SaaS Trigger + Apiary Walkthrough
 
 ## 1. Create the apiary mock endpoint
@@ -331,7 +333,11 @@ Create an app driven orchestration integration. Then start the integration with 
 
 [Watch this video to see PO creation](https://www.youtube.com/watch?v=jCUEBjNi86k)
 
-# Invoke Walkthrough
+![](genericScreenshots/p.png)
+
+On apiary's inspector tab, we should see that an API call was made a few seconds ago. 
+
+## Invoke Walkthrough
 
 [This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
@@ -343,7 +349,7 @@ Create an app driven orchestration integration. Then start the integration with 
 [Using a Digital Assistant Custom skill to create a PO](https://github.com/oracle/bots-node-sdk)
 
 
-## Apiary blueprint
+# Apiary blueprint
 ```
 FORMAT: 1A
 HOST: https://polls.apiblueprint.org/
