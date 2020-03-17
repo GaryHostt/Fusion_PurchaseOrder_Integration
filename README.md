@@ -69,9 +69,11 @@ In OIC, select the Oracle ERP cloud adapter.
 
 Name your connection.
 
-![](200/3.png)
+![](200/71.png)
 
-Configure your connection details, all of these fields need to be filled out. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud-service/icser/creating-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
+Configure your connection details. [Further details on the fields are here.]https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/create-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859
+
+**Use the user your configured in step 1 if doing the SaaS trigger walkthrough.**
 
 # Generic REST Trigger Walkthrough, order creation
 
