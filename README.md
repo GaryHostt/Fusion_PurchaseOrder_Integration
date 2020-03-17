@@ -40,6 +40,8 @@ This lab will various ways to use the ERP adapter in OIC.
 
 ### FBDI & Scheduled Orchestrations
 
+Please see my [colleague's write up](https://github.com/maldu23/Fusion-FBDI-Integration/blob/master/FBDI_Wkshp.md)
+
 ### Additional Resources & API blueprint
 
 # Pre-requisites 
@@ -342,6 +344,10 @@ Create an app driven orchestration integration. Then start the integration with 
 ![](genericScreenshots/p.png)
 
 On apiary's inspector tab, we should see that an API call was made a few seconds ago. 
+
+# FBDI
+
+Please see my [colleague's write up](https://github.com/maldu23/Fusion-FBDI-Integration/blob/master/FBDI_Wkshp.md).
 
 # Further work
 
