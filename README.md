@@ -28,12 +28,13 @@ This lab will various ways to use the ERP adapter in OIC.
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
 
-#### SaaS Trigger walkthrough
+#### SaaS Trigger + Apiary walkthrough
 1. Create an apiary mock endpoint
 2. Create the integration
 3. Mapping
 4. Performan the ERP business event
 5. Test & monitor the integration 
+6. See the apiary log
 
 #### Scheduled Invoke walkthrough
 
@@ -220,7 +221,7 @@ The message reveals that there was a problem with the Bill_to_site_use_id. From 
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
 
-# SaaS Trigger Walkthrough
+# SaaS Trigger + Apiary Walkthrough
 
 ## 1. Create the apiary mock endpoint
 
