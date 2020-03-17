@@ -38,7 +38,7 @@ This lab will various ways to use the ERP adapter in OIC.
 5. Monitor the integration 
 6. See the apiary log
 
-### FBDI
+### FBDI & Scheduled Orchestrations
 
 ### Additional Resources & API blueprint
 
@@ -331,13 +331,13 @@ Create a REST connection and type your base url, make sure you have no security 
 
 ## 3. Create the integration to receive the PO data upon creation
 
-Create an app driven orchestration integration. Then start the integration with your ERP connection.
+Create an app driven orchestration integration. Then start the integration with your ERP connection. The response from the PO creation event will be mapped to the request to your Apiary REST connection.
 
 ## 4. Create a PO in ERP 
 
-## 5. Verify & monitor the integration on OIC & Apiary
-
 [Watch this video to see PO creation](https://www.youtube.com/watch?v=jCUEBjNi86k)
+
+## 5. Verify & monitor the integration on OIC & Apiary
 
 ![](genericScreenshots/p.png)
 
