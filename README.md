@@ -309,6 +309,8 @@ Next, you'll have to map to outputs from Fusion & salesforce to your REST adapte
 ![](genericScreenshots/o.png)
 ![](genericScreenshots/m.png)
 
+Congratulations, now you can query for a contact's name by its id i salesforce, and get back Bank Account information. If I was operating a proper business, my ERP system likely would've contained a 'salesforce_contact_id' field, in which case I could have had this integration only start with one field to have the same information returned. Never the less, now we have an understanding of integration, for the purpose of querying multiple systems. 
+
 # SaaS Trigger + Apiary Walkthrough
 
 ## 1. Create the apiary mock endpoint
