@@ -28,7 +28,7 @@ This lab will various ways to use the ERP adapter in OIC.
 2. Create an app-driven orchestration
 3. Extending with salesforce (or another application)
 
-### SaaS Trigger + Apiary walkthrough
+### SaaS Trigger + Apiary walkthrough (Business Events from ERP)
 1. Create an apiary mock endpoint
 2. Create the integration
 3. Mapping
@@ -311,7 +311,7 @@ Congratulations, now you can query for a contact's name by its id i salesforce, 
 
 In lieu of salesforce, we could have used a GET endpoint on Apiary to simulate the same effect. Continue below to learn how to use Apiary in such a manner.
 
-# SaaS Trigger + Apiary Walkthrough
+# SaaS Trigger + Apiary Walkthrough (Business Events from ERP)
 
 **Note: You must have done step 1 of the pre-requisites, Configure ERP to send business events to OIC**
 
@@ -339,16 +339,13 @@ Create an app driven orchestration integration. Then start the integration with 
 
 On apiary's inspector tab, we should see that an API call was made a few seconds ago. 
 
-## Invoke Walkthrough
-
-[This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
-
-
 # Further work
 
 [Creating POs with VBCS](http://niallcblogs.blogspot.com/2019/03/695-oic-subscribing-to-fusion-erp.html)
 
 [Using a Digital Assistant Custom skill to create a PO](https://github.com/oracle/bots-node-sdk)
+
+[PO SOAP endpoint](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
 
 # Apiary blueprint
