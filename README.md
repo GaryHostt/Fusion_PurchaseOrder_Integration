@@ -24,8 +24,9 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 #### SaaS Trigger walkthrough
 1. Create an apiary mock endpoint
 2. Create the integration
-3. Performan the ERP business event
-4. Test & monitor the integration 
+3. Mapping
+4. Performan the ERP business event
+5. Test & monitor the integration 
 
 #### Scheduled Invoke walkthrough
 
@@ -148,13 +149,60 @@ Select the order import service and the createOrders action.
 
 Your summary page should look like this.
 
+## Mapping between REST & Fusion, activating your integration
 
+There are many fields an Order will take in Fusion. Read the 'treatise' portion of this [article](https://github.com/GaryHostt/Oracle_Integration/blob/master/README.md) to understand how you should tackle novel mapping situation. The screenshots below show the mapping for the fields if you do not copy the .iar. 
 
+![](genericScreenshots/11.png)
+![](genericScreenshots/12.png)
+![](genericScreenshots/13.png)
+![](genericScreenshots/14.png)
+![](genericScreenshots/15.png)
 
-Submit with blank because issues
+For the f(x) mappings, you will use the XSLT functions shown in the following screenshots. 
+![](genericScreenshots/16.png)
+![](genericScreenshots/17.png)
+![](genericScreenshots/18.png)
+
+You can hardcode these values:
+![](genericScreenshots/19.png)
+
+Resume with these mappings:
+![](genericScreenshots/20.png)
+![](genericScreenshots/21.png)
+
+These are all the request mappings:
+![](genericScreenshots/22.png)
+
+This is the mapping for the response back to the REST adapter:
+![](genericScreenshots/23.png)
+
+Don't forget to add a field to tracking:
+![](genericScreenshots/24.png)
+
+Now you can activate your integration.
+
+## Using Postman
+
+![](genericScreenshots/25.png)
+
+After adding your basic auth to the authorization tab, you can submit your request with the below payload, or you can copy the payload from the metadata endpoint of your activated integration.
+
+Some fields have been made blank to attempt to alleviate the difficulties of interacting with different ERP systems. 
 ```
 { "TransactionIdentifier": "Creekside Warehouse-14073", "BuyingPartyName": "Pinnacle Technologies", "BuyingPartyContactName": "Isaac Nelson", "BusinessUnitName": "US1 Business Unit", "ShipToPartyIdentifier": "", "ShipToPartyName": "Pinnacle Technologies", "BillToCustomerName": "Pinnacle Technologies", "ShipToPartySiteIdentifier": "", "BillToAccountSiteUseIdentifier": "", "OrderItems": [ { "ProductId": "AS46336", "Quantity": 3 }, { "ProductId": "AS46336", "Quantity": 3 } ] }
 ```
+
+
+![](genericScreenshots/26.png)
+
+You can use the activity stream from the tracking page to see if there were any problems with your integration. Click the underlined Message (or your equivalent).
+
+
+![](genericScreenshots/27.png)
+
+The message reveals that there was a problem with the Bill_to_site_use_id. From here we can troubleshoot the fields line by line.
+
 # SaaS Trigger Walkthrough
 
 ## 1. Create the apiary mock endpoint
