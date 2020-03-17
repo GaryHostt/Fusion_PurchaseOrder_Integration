@@ -23,9 +23,9 @@ This is also how your integration will look at the end of the walkthrough.
 
 During the walkthrough, relevant instructions will be UNDER the picture they correlate with.
 
-## Trigger Walkthrough
+# Pre-requisites 
 
-### 1.	Configure ERP to send business events to OIC
+## 1.	Configure ERP to send business events to OIC
 
 View these links from the a-team to learn how to configure ERP to send business events to OIC. 
 
@@ -34,6 +34,8 @@ View these links from the a-team to learn how to configure ERP to send business 
 [Using Business Events in Fusion-based SaaS with Oracle Integration Cloud - Part 2](http://www.ateam-oracle.com/using-business-events-with-integration-cloud-part-2)
 
 After doing the above configuration, you can create the connection with the adapter in OIC. 
+
+## 2. Use Cloud ERP adapter to make a connection to ERP
 
 ![](200/1.png)
 
@@ -47,7 +49,13 @@ Name your connection.
 
 Configure your connection details, all of these fields need to be filled out. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud-service/icser/creating-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
 
-### 2. Create the apiary mock endpoint
+# Generic REST Trigger Walkthrough
+
+
+
+# SaaS Trigger Walkthrough
+
+## 1. Create the apiary mock endpoint
 
 ![](100/71.png)
 
@@ -57,17 +65,17 @@ After copying the apiary blue print at the bottom of this lab, you can get your 
 
 Create a REST connection and type your base url, make sure you have no security policy selected.
 
-### 3. Create the integration to receive the PO data upon creation
+## 3. Create the integration to receive the PO data upon creation
 
 Create an app driven orchestration integration. Then start the integration with your ERP connection.
 
-### 4. Create a PO in ERP 
+## 4. Create a PO in ERP 
 
-### 5. Verify & monitor the integration on OIC & Apiary
+## 5. Verify & monitor the integration on OIC & Apiary
 
 [Watch this video to see PO creation](https://www.youtube.com/watch?v=jCUEBjNi86k)
 
-## Invoke Walkthrough
+# Invoke Walkthrough
 
 [This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
