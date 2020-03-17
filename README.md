@@ -10,18 +10,18 @@ This lab will various ways to use the ERP adapter in OIC.
 
 **CMD/CTRL F to skip to relevant part**
 
-#### Pre-requisites
+### Pre-requisites
 1. Configure ERP to send business events to OIC
 2. Connect ERP adapter
 3. Create a free apiary account
 
-#### Generic REST Trigger walkthrough, creation
+### Generic REST Trigger walkthrough, creation
 1. Verify you have a Generic REST trigger
 2. Create an app-driven orchestration
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
 
-#### Generic REST Trigger walkthrough, querying
+### Generic REST Trigger walkthrough, querying
 
 **1. Background on using the Fusion REST API** (Where to start Fusion Integration Development)
 
@@ -29,7 +29,7 @@ This lab will various ways to use the ERP adapter in OIC.
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
 
-#### SaaS Trigger + Apiary walkthrough
+### SaaS Trigger + Apiary walkthrough
 1. Create an apiary mock endpoint
 2. Create the integration
 3. Mapping
@@ -37,9 +37,9 @@ This lab will various ways to use the ERP adapter in OIC.
 5. Test & monitor the integration 
 6. See the apiary log
 
-#### Scheduled Invoke walkthrough
+### Scheduled Invoke walkthrough
 
-#### FBDI
+### FBDI
 
 # Pre-requisites 
 
