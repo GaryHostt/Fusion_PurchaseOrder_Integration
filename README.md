@@ -352,7 +352,6 @@ On apiary's inspector tab, we should see that an API call was made a few seconds
 # Apiary blueprint
 ```
 FORMAT: 1A
-HOST: https://polls.apiblueprint.org/
 
 # PO_Creation
 
