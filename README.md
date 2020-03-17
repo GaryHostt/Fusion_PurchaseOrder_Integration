@@ -22,7 +22,9 @@ This lab will various ways to use the ERP adapter in OIC.
 4. Tracking & Activity Stream
 
 #### Generic REST Trigger walkthrough, querying
-**1. Background on using the Fusion REST API**
+
+**1. Background on using the Fusion REST API** (Where to start Fusion Integration Development)
+
 2. Create an app-driven orchestration
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
