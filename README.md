@@ -9,6 +9,7 @@ How to receive business events from Fusion and create purchase orders with OIC.
 This lab will various ways to use the ERP adapter in OIC.
 
 ## Outline
+
 **CMD/CTRL F to skip to relevant part**
 
 #### Pre-requisites
@@ -213,11 +214,34 @@ You can use the activity stream from the tracking page to see if there were any 
 
 The message reveals that there was a problem with the Bill_to_site_use_id. From here we can troubleshoot the fields line by line.
 
-#### Generic REST Trigger walkthrough, querying bank accounts
+# Generic REST Trigger walkthrough, querying bank accounts
 
 0. Verify you have a Generic REST trigger (see previous instructions)
-1. Background on the Fusion REST API
-2. Create an app-driven orchestration
+
+## 1. Background on the Fusion REST API
+
+When building this workshop and other integrations, these are the steps I follow, which can be generalized from other endpoints.
+
+Of course, configure your authorization tab. Basic auth should work with the username & password you used to connect your adapter in OIC.
+
+To understand where to get the information about my ERP's bank accounts, I look at the [Fusion REST API documentation for Bank accounts](https://docs.oracle.com/en/cloud/saas/financials/18c/farfa/api-bank-accounts.html).
+
+First I call the 'get all' Bank Accounts endpoint
+
+```
+https://<Your Base URL (from adapter screen)>/fscmRestApi/resources/11.13.18.05/cashBankAccounts
+```
+this gives me a variety of entries with Primary keys to play around with - notice the BankAccountId field. Now I can call the endpoint to return just one bank account, so that I can see all of the fields related to Bank accounts at the individual level. 
+```
+https://<Your Base URL>/fscmRestApi/resources/11.13.18.05/cashBankAccounts/<BankAccountId>
+```
+If I need to know what data type a field is when mapping in OIC, returning to the 'get 1' endpoint may reveal that to me, such as the "BankBranchName", which is not in the 'get all' endpoint. To find where to get an entry for the 'get 1 endpoint' I look at the 'get all' endpoint.
+
+Note: you can use the REST adapter to perform these operations from OIC as well. 
+
+In my integration, I will be using a specific BankAccountId
+
+## 2. Create an app-driven orchestration
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
 
