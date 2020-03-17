@@ -1,6 +1,6 @@
 # Workshop: Fusion & salesforce with Oracle Integration & Apiary
 
-![](100/69.png)
+![](genericScreenshots/z.png)
 
 ## Objectives
 
