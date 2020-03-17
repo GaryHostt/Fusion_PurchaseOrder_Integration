@@ -15,7 +15,13 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 2. Connect ERP adapter
 3. Create a free apiary account
 
-#### Generic REST Trigger walkthrough
+#### Generic REST Trigger walkthrough, creation
+1. Verify you have a Generic REST trigger
+2. Create an app-driven orchestration
+3. Submit a payload with Postman
+4. Tracking & Activity Stream
+
+#### Generic REST Trigger walkthrough, querying
 1. Verify you have a Generic REST trigger
 2. Create an app-driven orchestration
 3. Submit a payload with Postman
@@ -66,7 +72,7 @@ Name your connection.
 
 Configure your connection details, all of these fields need to be filled out. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud-service/icser/creating-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
 
-# Generic REST Trigger Walkthrough
+# Generic REST Trigger Walkthrough, order creation
 
 The .iar file for this integration is in this repo, ERP_CREATE_ORDER.iar. If you import this to your environment, update the connection details to use your environments before activating the integration.
 
