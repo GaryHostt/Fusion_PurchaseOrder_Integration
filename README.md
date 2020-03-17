@@ -351,6 +351,12 @@ On apiary's inspector tab, we should see that an API call was made a few seconds
 
 [PO SOAP endpoint](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
 
+[More Fusion labs + extending with CPQ, Process Automation, ATP](https://github.com/GaryHostt/OIC_SaaS_integration)
+
+[Oracle Developer Services](https://github.com/GaryHostt/OCI_DevOps)
+
+[Oracle Integration Master Repository](https://github.com/GaryHostt/Oracle_Integration)
+
 
 # Apiary blueprint
 ```
