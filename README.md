@@ -1,4 +1,4 @@
-# Workshop: Fusion & Purchase orders with Oracle Integration
+# Workshop: Fusion & Oracle Integration
 
 ![](100/69.png)
 
