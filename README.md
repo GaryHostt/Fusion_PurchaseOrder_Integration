@@ -58,6 +58,8 @@ Configure your connection details, all of these fields need to be filled out. [F
 
 # Generic REST Trigger Walkthrough
 
+![](genericScreenshots/1.png)
+
 Request:
 ```
 {
