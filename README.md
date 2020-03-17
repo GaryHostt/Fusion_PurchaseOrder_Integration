@@ -1,4 +1,4 @@
-# Workshop: Fusion & Oracle Integration & Apiary & Salesforce
+# Workshop: Fusion & salesforce with & Oracle Integration & Apiary
 
 ![](100/69.png)
 
@@ -32,11 +32,9 @@ This lab will various ways to use the ERP adapter in OIC.
 1. Create an apiary mock endpoint
 2. Create the integration
 3. Mapping
-4. Performan the ERP business event
+4. Perform the ERP business event
 5. Test & monitor the integration 
 6. See the apiary log
-
-### Scheduled Invoke walkthrough
 
 ### FBDI
 
