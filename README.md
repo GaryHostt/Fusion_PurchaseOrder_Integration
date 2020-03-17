@@ -2,8 +2,6 @@
 
 ![](100/69.png)
 
-How to receive business events from Fusion and create purchase orders with OIC. 
-
 ## Objectives
 
 This lab will various ways to use the ERP adapter in OIC.
