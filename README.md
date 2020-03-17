@@ -13,6 +13,7 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 #### Pre-requisites
 1. Configure ERP to send business events to OIC
 2. Connect ERP adapter
+3. Create a free apiary account
 
 #### Generic REST Trigger walkthrough
 1. Verify you have a Generic REST trigger
@@ -46,7 +47,11 @@ View these links from the a-team to learn how to configure ERP to send business 
 
 After doing the above configuration, you can create the connection with the adapter in OIC. 
 
-## 2. Use Cloud ERP adapter to make a connection to ERP
+## 2. Create a free apiary account
+
+You can create a free Apiary account [here](https://login.apiary.io/register). *It is only necessary for the SaaS trigger walkthrough as well.*
+
+## 3. Use Cloud ERP adapter to make a connection to ERP
 
 ![](200/1.png)
 
