@@ -26,9 +26,11 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 
 # Pre-requisites 
 
-## 1.	Configure ERP to send business events to OIC [only for SaaS trigger walkthrough]
+## 1.	Configure ERP to send business events to OIC* 
 
 **While this is only necessary for the 2nd walkthrough, this may take a while to properly configure.**
+
+*this is only necessary for the SaaS trigger walkthrough*
 
 View these links from the a-team to learn how to configure ERP to send business events to OIC. 
 
