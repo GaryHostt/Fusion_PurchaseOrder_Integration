@@ -26,8 +26,7 @@ This lab will various ways to use the ERP adapter in OIC.
 **1. Background on using the Fusion REST API** (Where to start Fusion Integration Development)
 
 2. Create an app-driven orchestration
-3. Submit a payload with Postman
-4. Tracking & Activity Stream
+3. Extending with salesforce
 
 ### SaaS Trigger + Apiary walkthrough
 1. Create an apiary mock endpoint
@@ -242,8 +241,73 @@ Note: you can use the REST adapter to perform these operations from OIC as well.
 In my integration, I will be using a specific BankAccountId
 
 ## 2. Create an app-driven orchestration
-3. Submit a payload with Postman
-4. Tracking & Activity Stream
+
+
+![](genericScreenshots/a.png)
+
+This is what your integration will look like in the end. The REST adapter receives a field that it passed to the id field below.
+
+
+![](genericScreenshots/b.png)
+
+This id field is the 'BankAccountId' field from the background section.
+
+
+![](genericScreenshots/c.png)
+
+We can see the response fields from the adapter, in this case I map the name to the return statement of the REST adapter. 
+
+## 3. Extending with salesforce
+
+What if we want to create one endpoint that is able to query multiple systems? Enabling our developers to worry about one less authentication to worry about? Below we will be creating an endpoint that can also take a key for a salesforce business object, and return information about it. Keep in mind for production, the 'fusionKey' & 'salesforceKey' could be the same, like 'businessKey', and both mapped to get different responses from both systems. 
+
+![](genericScreenshots/d.png)
+
+This is what your integration should look like in the end.
+
+I use the POST action on the REST adapter taking in these keys to query the systems, but the same functionality could be implemented by using the GET verb and inputting these as parameters instead. Just because we are using POST, does not mean we are changing anything in these systems, because we are not. 
+
+Request payload for REST:
+
+```
+{
+  "fusionKey" : "",
+  "salesforceKey" : ""
+}
+```
+Response payload for REST:
+```
+{
+  "fusionResponse1" : "",
+  "fusionResponse2" : "",
+  "SFDCResponse1" : ""
+}
+```
+Of course, you'll need an active salesforce connection using the adapter, like below. 
+
+![](genericScreenshots/e.png)
+
+After putting it on your orchestration, configure the adapter as follow:
+
+![](genericScreenshots/f.png)
+![](genericScreenshots/g.png)
+![](genericScreenshots/h.png)
+![](genericScreenshots/i.png)
+
+Next you'll have to map your REST payload to the input for your salesforce adapter. 
+
+![](genericScreenshots/j.png)
+
+For mapping to the salesforce adapter, take your salesforce key and map it to the ids. For submitting the payload, you can find a relevant contact id in your salesforce environment using SOQL, this can even be done from the salesforce adapter in OIC, shown below.
+
+![](genericScreenshots/k.png)
+![](genericScreenshots/l.png)
+
+Next, you'll have to map to outputs from Fusion & salesforce to your REST adapter's return, shown below.
+
+![](genericScreenshots/n.png)
+![](genericScreenshots/o.png)
+![](genericScreenshots/m.png)
 
 # SaaS Trigger + Apiary Walkthrough
 
