@@ -24,17 +24,11 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 
 #### Scheduled Invoke walkthrough
 
-## Reference
-
-![](screenshots/200/8.png)
-
-This is also how your integration will look at the end of the walkthrough.
-
-During the walkthrough, relevant instructions will be UNDER the picture they correlate with.
-
 # Pre-requisites 
 
-## 1.	Configure ERP to send business events to OIC
+## 1.	Configure ERP to send business events to OIC [only for SaaS trigger walkthrough]
+
+**While this is only necessary for the 2nd walkthrough, this may take a while to properly configure.**
 
 View these links from the a-team to learn how to configure ERP to send business events to OIC. 
 
