@@ -71,7 +71,7 @@ Name your connection.
 
 ![](200/71.png)
 
-Configure your connection details. [Further details on the fields are here.]https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/create-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859
+Configure your connection details. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/create-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
 
 **Use the user your configured in step 1 if doing the SaaS trigger walkthrough.**
 
