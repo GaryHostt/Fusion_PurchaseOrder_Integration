@@ -1,19 +1,21 @@
-# Workshop: Fusion & Purchase orders with Oracle Integration
+# Workshop: Fusion Triggers & Invokes
 
-![](100/69.png)
+![](screenshots/100/69.png)
 
-How to receive business events from Fusion and create purchase orders with OIC. 
+## Trigger via business events
+
+This lab will show how to configure ERP as an integration trigger.
+
 
 ## Objectives
 
-This lab will show how to configure ERP as an integration trigger with the ERP adapter, and how to invoke it.
+•	Create an integration to listen for a business event in ERP
 
 ### Outline
 1. Configure ERP to send business events to OIC
-2. Create an apiary mock endpoint
-3. Create the integration
-4. Performan the ERP business event
-5. Test & monitor the integration 
+2. Create the integration
+3. Performan the ERP business event
+4. Test & monitor the integration 
 
 ## Reference
 
@@ -23,9 +25,9 @@ This is also how your integration will look at the end of the walkthrough.
 
 During the walkthrough, relevant instructions will be UNDER the picture they correlate with.
 
-## Trigger Walkthrough
+# Walkthrough
 
-### 1.	Configure ERP to send business events to OIC
+## 1.	Configure ERP to send business events to OIC
 
 View these links from the a-team to learn how to configure ERP to send business events to OIC. 
 
@@ -35,86 +37,137 @@ View these links from the a-team to learn how to configure ERP to send business 
 
 After doing the above configuration, you can create the connection with the adapter in OIC. 
 
-![](200/1.png)
+![](screenshots/200/1.png)
 
 In OIC, select the Oracle ERP cloud adapter.
 
-![](200/2.png)
+
+![](screenshots/200/2.png)
 
 Name your connection.
 
-![](200/3.png)
+
+![](screenshots/200/3.png)
 
 Configure your connection details, all of these fields need to be filled out. [Further details on the fields are here.](https://docs.oracle.com/en/cloud/paas/integration-cloud-service/icser/creating-connection.html#GUID-1B92F72F-4AA8-4C2B-9E93-8F9760EEE859)
 
-### 2. Create the apiary mock endpoint
 
-![](100/71.png)
 
-After copying the apiary blue print at the bottom of this lab, you can get your base URL from the location in the screenshot above.
+## 2. Create the integration to receive the item creation data 
 
-![](100/72.png)
-
-Create a REST connection and type your base url, make sure you have no security policy selected.
-
-### 3. Create the integration to receive the PO data upon creation
 
 Create an app driven orchestration integration. Then start the integration with your ERP connection.
 
-### 4. Create a PO in ERP 
+![](screenshots/200/4.png)
 
-### 5. Verify & monitor the integration on OIC & Apiary
+Give a name to your endpoint. 
+
+
+![](screenshots/200/5.png)
+
+Configure the request page to receive busienss events from ERP cloud, then select item create event. 
+
+
+![](screenshots/200/6.png)
+
+You do not need to configure a response to be received. 
+
+![](screenshots/200/7.png)
+
+This is the summary of the item create event subscription.
+
+
+![](screenshots/200/13.png)
+
+Below your ERP connection, click the plus sign and place your SOAP-CPQ connection configured in lab 100. Configure it exactly the same. 
+
+
+![](screenshots/200/8.png)
+
+After doing that, your integration should look like this, open the mapper by pressing the pen button that appears after clicking the mapper. 
+
+
+![](screenshots/200/9.png)
+
+This is how your mapper should appear after it is completed. See lab 100 for how to create the 'attribute(@table_name) field. For the other fields, map: 
+
+ItemId -> ProductID
+OrganizationCode -> Division
+ItemNumber -> ProductName
+ItemDescription -> Description
+ApprovalStatusValue -> ApprovalStatus
+CreationDate -> CreationDate
+
+Lastly, don't forget to specify a field for tracking. 
+
+## 3. Create an item in ERP 
 
 [Watch this video to see PO creation](https://www.youtube.com/watch?v=jCUEBjNi86k)
 
-## Invoke Walkthrough
 
-[This is the SOAP endpoint we will be using](https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html)
+![](screenshots/200/14.png)
+
+From the ERP homepage, navigate to the Product Information Management suite.
+
+![](screenshots/200/15.png)
+
+Click the side bar on the right. 
+
+![](screenshots/200/16.png)
+
+Click on create item.
+
+![](screenshots/200/17.png)
+
+These details can vary per your use case, here we select these fields. 
+![](screenshots/200/18.png)
+
+Press yes if you get this warning. 
+![](screenshots/200/19.png)
+
+Enter the details for your item. 
+
+![](screenshots/200/20.png)
+
+Save and close. This will trigger the business event that a new item was created. The information will be passed to Oracle Integration. 
+
+## 4. Verify & monitor the integration
+
+![](screenshots/200/21.png)
+
+On the monitoring page you should see a completed integration. 
+
+![](screenshots/200/22.png)
+
+Clicking on the tracking shows green for each stage of the integration. 
+
+![](screenshots/200/23.png)
+
+Viewing the activity stream allows you to view the payloads at each step. 
+
+![](screenshots/200/24.png)
+
+The audit trails shows the actions that occured in the integration.
+
+![](screenshots/200/25.png)
+
+Looking at the data table in CPQ, you can see the new row with our information from ERP. 
+
+You can watch the Demo1 video to confirm that you completed the lab successfully. 
 
 
-# Further work
+## Invoke
 
-[Creating POs with VBCS](http://niallcblogs.blogspot.com/2019/03/695-oic-subscribing-to-fusion-erp.html)
+https://docs.oracle.com/en/cloud/saas/procurement/18b/oeswp/Purchase-Order-Service-Version-2-PurchaseOrderService-svc-3.html
 
-[Using a Digital Assistant Custom skill to create a PO](https://github.com/oracle/bots-node-sdk)
+https://blogs.oracle.com/cloud-infrastructure/using-terraform-to-manage-your-apis
 
-
-## Apiary blueprint
-```
-FORMAT: 1A
-HOST: https://polls.apiblueprint.org/
-
-# PO_Creation
-
-This is a simple API allowing the receiving of PO fields from Fusion ERP.
-
-## Questions Collection [/purchaseOrders]
-
-### Post a PO [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "OrderNumber": "12345",
-            "POHeaderId": 1234,
-            "ProcurementBusinessUnit":"12345",
-            "BuyerEmail":"email@email.com"
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /PO/2
-
-    + Body
-
-            {"status":"success"}
-
-```
-
+CREATE TABLE Opportunity (
+   POHeaderId VARCHAR2(255),
+   OrderNumber VARCHAR2(255),
+   BuyerName VARCHAR2(255),
+   BuyerEmail VARCHAR2(255),
+   ItemNumber VARCHAR2(255),
+   ItemId VARCHAR2(255)
+);
 
