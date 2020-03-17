@@ -24,6 +24,8 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 
 #### Scheduled Invoke walkthrough
 
+#### FBDI
+
 # Pre-requisites 
 
 ## 1.	Configure ERP to send business events to OIC* 
