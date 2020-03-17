@@ -1,6 +1,8 @@
 # Workshop: Fusion & salesforce with Oracle Integration & Apiary
 
-![](genericScreenshots/z.png)
+<p align="center">
+  <img src="https://github.com/GaryHostt/Fusion_PurchaseOrder_Integration/blob/master/genericScreenshots/z.png?raw=true" alt="comic"/>
+</p>
 
 ## Objectives
 
