@@ -8,7 +8,7 @@ How to receive business events from Fusion and create purchase orders with OIC.
 
 This lab will show how to configure ERP as an integration trigger with the ERP adapter, and how to invoke it.
 
-### Outline
+### Outline [CMD/CTRL F to skip to relevant part]
 
 #### Pre-requisites
 1. Configure ERP to send business events to OIC
@@ -208,6 +208,12 @@ You can use the activity stream from the tracking page to see if there were any 
 ![](genericScreenshots/27.png)
 
 The message reveals that there was a problem with the Bill_to_site_use_id. From here we can troubleshoot the fields line by line.
+
+#### Generic REST Trigger walkthrough, querying bank accounts
+1. Verify you have a Generic REST trigger
+2. Create an app-driven orchestration
+3. Submit a payload with Postman
+4. Tracking & Activity Stream
 
 # SaaS Trigger Walkthrough
 
