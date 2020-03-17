@@ -35,10 +35,12 @@ This lab will various ways to use the ERP adapter in OIC.
 2. Create the integration
 3. Mapping
 4. Perform the ERP business event
-5. Test & monitor the integration 
+5. Monitor the integration 
 6. See the apiary log
 
 ### FBDI
+
+### Additional Resources & API blueprint
 
 # Pre-requisites 
 
