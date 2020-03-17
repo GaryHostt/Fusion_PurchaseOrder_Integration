@@ -26,7 +26,7 @@ This lab will various ways to use the ERP adapter in OIC.
 **1. Background on using the Fusion REST API** (Where to start Fusion Integration Development)
 
 2. Create an app-driven orchestration
-3. Extending with salesforce
+3. Extending with salesforce (or another application)
 
 ### SaaS Trigger + Apiary walkthrough
 1. Create an apiary mock endpoint
