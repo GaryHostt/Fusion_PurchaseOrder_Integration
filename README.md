@@ -9,11 +9,20 @@ How to receive business events from Fusion and create purchase orders with OIC.
 This lab will show how to configure ERP as an integration trigger with the ERP adapter, and how to invoke it.
 
 ### Outline
+
+#### Pre-requisites
 1. Configure ERP to send business events to OIC
-2. Create an apiary mock endpoint
-3. Create the integration
-4. Performan the ERP business event
-5. Test & monitor the integration 
+2. Connect ERP adapter
+
+#### Generic REST Trigger walkthrough
+
+#### SaaS Trigger walkthrough
+1. Create an apiary mock endpoint
+2. Create the integration
+3. Performan the ERP business event
+4. Test & monitor the integration 
+
+#### Scheduled Invoke walkthrough
 
 ## Reference
 
