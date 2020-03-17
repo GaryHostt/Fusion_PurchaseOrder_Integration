@@ -60,8 +60,41 @@ Configure your connection details, all of these fields need to be filled out. [F
 
 # Generic REST Trigger Walkthrough
 
+Request:
+```
+{
+  "TransactionIdentifier" : "Creekside Warehouse-14073",
+  "BuyingPartyName" : "Pinnacle Technologies",
+  "BuyingPartyContactName" : "Isaac Nelson",
+  "BusinessUnitName" : "US1 Business Unit",
+  "ShipToPartyIdentifier" : "A100000000409220",
+  "ShipToPartyName" : "Pinnacle Technologies",
+  "BillToCustomerName" : "Pinnacle Technologies",
+  "ShipToPartySiteIdentifier" : "A300000048361113",
+  "BillToAccountSiteUseIdentifier" : "A300000048361115",
+  "OrderItems" : [ {
+    "ProductId" : "AS46336",
+    "Quantity" : 3
+  }, {
+    "ProductId" : "AS46336",
+    "Quantity" : 3
+  } ]
+}
+```
+
+Response:
+```
+{
+  "orderNumber" : "A11231",
+  "orderStatus" : "Success"
+}
+```
 
 
+Submit with blank because issues
+```
+{ "TransactionIdentifier": "Creekside Warehouse-14073", "BuyingPartyName": "Pinnacle Technologies", "BuyingPartyContactName": "Isaac Nelson", "BusinessUnitName": "US1 Business Unit", "ShipToPartyIdentifier": "", "ShipToPartyName": "Pinnacle Technologies", "BillToCustomerName": "Pinnacle Technologies", "ShipToPartySiteIdentifier": "", "BillToAccountSiteUseIdentifier": "", "OrderItems": [ { "ProductId": "AS46336", "Quantity": 3 }, { "ProductId": "AS46336", "Quantity": 3 } ] }
+```
 # SaaS Trigger Walkthrough
 
 ## 1. Create the apiary mock endpoint
