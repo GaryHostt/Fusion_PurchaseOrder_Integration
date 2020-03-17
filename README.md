@@ -1,4 +1,4 @@
-# Workshop: Fusion & Oracle Integration & Apiary
+# Workshop: Fusion & Oracle Integration & Apiary & Salesforce
 
 ![](100/69.png)
 
@@ -15,13 +15,13 @@ This lab will various ways to use the ERP adapter in OIC.
 2. Connect ERP adapter
 3. Create a free apiary account
 
-### Generic REST Trigger walkthrough, creation
+### Generic REST Trigger walkthrough, order creation
 1. Verify you have a Generic REST trigger
 2. Create an app-driven orchestration
 3. Submit a payload with Postman
 4. Tracking & Activity Stream
 
-### Generic REST Trigger walkthrough, querying
+### Generic REST Trigger walkthrough, querying Fusion & salesforce
 
 **1. Background on using the Fusion REST API** (Where to start Fusion Integration Development)
 
