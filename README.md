@@ -15,6 +15,10 @@ This lab will show how to configure ERP as an integration trigger with the ERP a
 2. Connect ERP adapter
 
 #### Generic REST Trigger walkthrough
+1. Verify you have a Generic REST trigger
+2. Create an app-driven orchestration
+3. Submit a payload with Postman
+4. Tracking & Activity Stream
 
 #### SaaS Trigger walkthrough
 1. Create an apiary mock endpoint
@@ -58,7 +62,42 @@ Configure your connection details, all of these fields need to be filled out. [F
 
 # Generic REST Trigger Walkthrough
 
+The .iar file for this integration is in this repo, ERP_CREATE_ORDER.iar. If you import this to your environment, update the connection details to use your environments before activating the integration.
+
+## Verify you have a Generic REST trigger
+
 ![](genericScreenshots/1.png)
+
+Under connections, verify you have a generic or all purpose REST trigger.
+
+![](genericScreenshots/2.png)
+
+It is just a REST adapter with no details. This is what we use when using OIC as a 'drag & drop API builder.' 
+
+
+## Create an app-driven orchestration
+
+![](genericScreenshots/3.png)
+
+Return to the integrations tab and create an app-driven orchestration.
+
+
+![](genericScreenshots/4.png)
+
+Name your integration. 
+
+![](genericScreenshots/5.png)
+
+This is what your integration will look like at the end. Begin by placing your generic REST adapter on the canvas. 
+
+
+![](genericScreenshots/7.png)
+
+Input these details.
+
+![](genericScreenshots/6.png)
+
+Configure a payload & response. On the request and response page, select JSON and press the blue inline text. Insert these payloads.
 
 Request:
 ```
@@ -89,6 +128,22 @@ Response:
   "orderStatus" : "Success"
 }
 ```
+
+![](genericScreenshots/8.png)
+
+Select the CRUD action.
+
+
+![](genericScreenshots/9.png)
+
+Select the order import service and the createOrders action.
+
+
+![](genericScreenshots/10.png)
+
+Your summary page should look like this.
+
+
 
 
 Submit with blank because issues
