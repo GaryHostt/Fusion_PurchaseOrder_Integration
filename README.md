@@ -313,6 +313,8 @@ In lieu of salesforce, we could have used a GET endpoint on Apiary to simulate t
 
 # SaaS Trigger + Apiary Walkthrough
 
+**Note: You must have done step 1 of the pre-requisites, Configure ERP to send business events to OIC**
+
 ## 1. Create the apiary mock endpoint
 
 ![](100/71.png)
