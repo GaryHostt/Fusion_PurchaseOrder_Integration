@@ -359,9 +359,9 @@ Please see my [colleague's write up](https://github.com/maldu23/Fusion-FBDI-Inte
 
 [More Fusion labs + extending with CPQ, Process Automation, ATP](https://github.com/GaryHostt/OIC_SaaS_integration)
 
-[Oracle Developer Services](https://github.com/GaryHostt/OCI_DevOps)
+[Oracle Cloud-Native Development](https://garyhostt.github.io/OCI_DevOps/)
 
-[Oracle Integration Master Repository](https://github.com/GaryHostt/Oracle_Integration)
+[Oracle Integration Master Repository](https://garyhostt.github.io/Oracle_Integration/)
 
 
 # Apiary blueprint
